@@ -1,0 +1,33 @@
+\begin{table*}%[H]
+           \centering
+           \captionsetup[subtable]{position = below}
+          \captionsetup[table]{position=top}
+           \caption{Blahblah}
+           \begin{subtable}{0.3\linewidth}
+               \centering
+               \begin{tabular}{|c|c|}
+                   \hline
+                   \textbf{h [m]} & \textbf{dim [m]} \\ \hline
+                   30 & 0.75 \\ \hline
+                   50 & 1.25 \\ \hline
+                   70 & 1.75 \\ \hline
+                   100 & 2.50 \\ \hline
+               \end{tabular}
+               \caption{Minimum dimension of an object for it to be detected by the FFT algorithm at different heights}
+               \label{tab:dimFFT}
+           \end{subtable}%
+           \hspace*{4em}
+           \begin{subtable}{0.3\linewidth}
+               \centering
+               \begin{tabular}{|c|c|}
+                   \hline
+                   \textbf{h [m]} & \textbf{dim [m]} \\ \hline
+                   30 & 0.28 \\ \hline
+                   50 & 0.47 \\ \hline
+                   70 & 0.66 \\ \hline
+                   100 & 0.94 \\ \hline
+               \end{tabular}
+                \caption{Minimum dimension of an object for it to be detected by the GMM algorithm at different heights}
+                 \label{tab:dimGMM}
+           \end{subtable}
+       \end{table*}

@@ -1,0 +1,142 @@
+
+% \subfloat[Quantitative results on NuScenes dataset]{
+% \begin{tabular}{c|ccc|c|c} 
+% \hline
+% \multirow{2}{*}{Method} & \multicolumn{3}{c|}{Image Quality} & Semantics Consistency & Visual Consistency \\ 
+% \cline{2-6}
+%  & FID$\downarrow$ & IS$\uparrow$ & CS$\uparrow$ & $\rm{IoU_{BEV}}$$\uparrow$ & PSNR$\uparrow$ \\ 
+% \hline
+% Reference-score & $18.87$ & $ 4.53 $ & $25.94$ & $0.711$ & $15.37$ \\ 
+% Controlnet~\cite{zhang2023adding} & $21.93$ & $4.71$ & $27.02$ & $0.434$ & $12.82$ \\ 
+% MVD~\cite{Tang2023mvdiffusion} & $19.89$ & $4.91$ & $27.07$ & $0.440$ & $12.66$ \\
+% BEVGen\cite{swerdlow2023street} & $25.54$ & - & - & $0.502$ & - \\
+% MagicDrive\cite{gao2023magicdrive} & $\mathbf{16.20} $ & - & - & $\mathbf{0.611}$ & - \\
+% \hline
+% Ours & $16.95$ & $\mathbf{6.35}$ & $\mathbf{28.79}$ & 0.510 & $\mathbf{20.67}$ \\
+% \hline
+% \end{tabular}
+% }
+
+\subfloat[Quantitative results on NuScenes dataset]{
+\begin{tabular}{c|c|ccc|c|c} 
+\hline
+\multirow{2}{*}{Method} & \multirow{2}{*}{Training Samples} & \multicolumn{3}{c|}{Image Quality} & Semantics Consistency & Visual Consistency \\ 
+\cline{3-7}
+ & & FID$\downarrow$ & IS$\uparrow$ & CS$\uparrow$ & $\rm{IoU_{BEV}}$$\uparrow$ & PSNR$\uparrow$ \\ 
+\hline
+Reference-score & - &$6.20$ & $ 5.77 $ & $27.54$ & $0.711$ & $15.37$ \\ \hline \hline
+BEVGen\cite{swerdlow2023street} & $28130$ & $25.54$ & - & - & $0.502$ & - \\
+MagicDrive\cite{gao2023magicdrive} & $28130$ & $\mathbf{16.20} $ & - & - & $\mathbf{0.611}$ & - \\ \hline
+Controlnet~\cite{zhang2023adding} & $6000$ & $21.93$ & $4.71$ & $27.02$ & $0.434$ & $12.82$ \\ 
+MVD~\cite{Tang2023mvdiffusion} & $6000$ & $19.89$ & $4.91$ & $27.07$ & $0.440$ & $12.66$ \\
+\hline \hline
+Ours & $6000$ & $16.95$ & $\mathbf{6.35}$ & $\mathbf{28.79}$ & 0.510 & $\mathbf{20.67}$ \\
+\hline
+\end{tabular}
+}
+
+
+\quad
+
+\subfloat[Human analysis on NuScenes dataset. ]{
+\begin{tabular}{cc|ccc}
+\hline
+\multicolumn{2}{c|}{Comparisons}                                                                                              & Win & Undecided & Lose \\ \hline \hline
+\multicolumn{1}{c|}{\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Cross-view\\ Consistency\end{tabular}}} & MVD v.s. Controlnet  & $\mathbf{.26}$ & $.50$       & $.25$  \\
+\multicolumn{1}{c|}{}                                                                                  & Ours v.s. Controlnet & $\mathbf{.73}$ & $.27$       & $.00$  \\
+\multicolumn{1}{c|}{}                                                                                  & Ours v.s. MVD        & $\mathbf{.71}$ & $.29$       & $.00$  \\ \hline \hline
+\multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Camera Pose\\ Consistency\end{tabular}}                 & Ours v.s. MagicDrive & $\mathbf{.61}$ & $.31$       & $.08$    \\ \hline
+\end{tabular}
+}
+
+% \subfloat[Human analysis on NuScenes dataset. ]{
+% \begin{tabular}{c|c|ccc}
+%     \toprule
+%     \multicolumn{2}{c|}{Comparisons} & Win & Undecided & Loss \\
+%     \midrule
+%     \multirow{3}{}{Cross-view consistency}
+%     MVD~\cite{Tang2023mvdiffusion} v.s. Controlnet~\cite{zhang2023adding} & .26 & .50 & .25 \\
+%     Ours v.s. Controlnet~\cite{zhang2023adding} & .73 & .27 & .00 \\
+%     Ours v.s. MVD~\cite{Tang2023mvdiffusion} & .71 & .29 & .00 \\
+%     \hline 
+    
+% \end{tabular}
+% }
+
+
+% original table 1
+% \begin{table*}%[H]
+%            \centering
+%            \captionsetup[subtable]{position = below}
+%           \captionsetup[table]{position=top}
+%            \caption{Blahblah}
+%            \begin{subtable}{0.3\linewidth}
+%                \centering
+%                \begin{tabular}{|c|c|}
+%                    \hline
+%                    \textbf{h [m]} & \textbf{dim [m]} \\ \hline
+%                    30 & 0.75 \\ \hline
+%                    50 & 1.25 \\ \hline
+%                    70 & 1.75 \\ \hline
+%                    100 & 2.50 \\ \hline
+%                \end{tabular}
+%                \caption{Minimum dimension of an object for it to be detected by the FFT algorithm at different heights}
+%                \label{tab:dimFFT}
+%            \end{subtable}%
+%            \hspace*{4em}
+%            \begin{subtable}{0.3\linewidth}
+%                \centering
+%                \begin{tabular}{|c|c|}
+%                    \hline
+%                    \textbf{h [m]} & \textbf{dim [m]} \\ \hline
+%                    30 & 0.28 \\ \hline
+%                    50 & 0.47 \\ \hline
+%                    70 & 0.66 \\ \hline
+%                    100 & 0.94 \\ \hline
+%                \end{tabular}
+%                 \caption{Minimum dimension of an object for it to be detected by the GMM algorithm at different heights}
+%                  \label{tab:dimGMM}
+%            \end{subtable}
+%        \end{table*}
+
+
+% %% side by side using parbox
+% \parbox{.45\linewidth}{
+% \centering
+
+% \begin{tabular}{c|ccc|cc|c} 
+% \hline
+% \multirow{2}{*}{Method} & \multicolumn{3}{c|}{Image Quality} & \multicolumn{2}{c|}{Semantics Consistency} & Visual Consistency \\ 
+% \cline{2-7}
+%  & FID$\downarrow$ & IS$\uparrow$ & CS$\uparrow$ & $\rm{IoU_{Pers}}$$\uparrow$ & $\rm{IoU_{BEV}}$$\uparrow$ & PSNR$\uparrow$ \\ 
+% \hline
+% Reference-score & $18.87$ & $ 5.11 $ & $26.46$ & $0.618$ & $0.711$ & $15.37^*$ \\ 
+% SD + Controlnet~\cite{??} & $\mathbf{32.71}$ & $\mathbf{3.53}$ & $28.66$ & $0.476$ & $0.366$ & $12.08$ \\ 
+% MVDiffusion~\cite{??} & $43.83$ & $3.11$ & $28.69$ & $0.560$ & $0.418$ & $11.64$ \\ 
+% \hline
+% Ours & $38.22$ & $3.25$ & $\mathbf{28.71}$ & $\mathbf{0.588}$ & $\mathbf{0.421}$ & $\mathbf{20.05}$ \\
+% \hline
+% \end{tabular}
+
+% \caption{1. xxxxxxxxxxxxxxxxxxxxxx}
+% }
+
+% \hfill
+
+
+% \parbox{.45\linewidth}{
+% \centering
+
+% \begin{tabular}{c|ccc}
+%     \toprule
+%      Comparisons & Win & Undecided & Loss \\
+%     \midrule
+%     MVDiffusion~\cite{??} v.s. SD + Controlnet~\cite{??} & .26 & .50 & .25 \\
+%     Ours v.s. SD + Controlnet~\cite{??} & .73 & .27 & .00 \\
+%     Ours v.s. MVDiffusion~\cite{??} & .71 & .29 & .00 \\
+%     \hline 
+    
+% \end{tabular}
+
+% \caption{2. xxxxxxxxxxxxxxxxxxx}
+% }
